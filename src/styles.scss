@@ -1,1 +1,91 @@
 /* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;500;700&display=swap');
+
+:root {
+    --color-primary: #63BFAD;
+    --color-secondary: #FFCC00;
+    --color-secondary-dark: #061020;
+    --color-tertiary: #E8EAED;
+    --color-primary-light: #F2F2F2;
+    --border-button-secondary: 2px solid gainsboro;
+    --box-shadow: 0px 8px 24px rgba(1, 12, 21, 0.04);
+    --card-box-shadow:  0px 2px 12px rgba(20, 20, 43, 0.08);
+}
+
+
+@font-face {
+    font-family: 'proxima_nova_rgregular';
+    src: url('https://litmus.com/fonts/Emails/proximanova-regular-webfont.eot');
+    src: url('https://litmus.com/fonts/Emails/proximanova-regular-webfont.eot?#iefix') format('embedded-opentype'),
+        url('https://litmus.com/fonts/Emails/proximanova-regular-webfont.woff') format('woff'),
+        url('https://litmus.com/fonts/Emails/proximanova-regular-webfont.ttf') format('truetype'),
+        url('https://litmus.com/fonts/Emails/proximanova-regular-webfont.svg#proxima_nova_rgregular') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'proxima_nova_rgbold';
+    src: url('https://litmus.com/fonts/Emails/proximanova-bold-webfont.eot');
+    src: url('https://litmus.com/fonts/Emails/proximanova-bold-webfont.eot?#iefix') format('embedded-opentype'),
+    url('https://litmus.com/fonts/Emails/proximanova-bold-webfont.woff') format('woff'),
+    url('https://litmus.com/fonts/Emails/proximanova-bold-webfont.ttf') format('truetype'),
+    url('https://litmus.com/fonts/Emails/proximanova-bold-webfont.svg#proxima_nova_rgbold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'adelle_rgregular';
+    src: url('https://litmus.com/fonts/Emails/adelle_reg-webfont.eot');
+    src: url('https://litmus.com/fonts/Emails/adelle_reg-webfont.eot?#iefix') format('embedded-opentype'),
+    url('https://litmus.com/fonts/Emails/adelle_reg-webfont.woff') format('woff'),
+    url('https://litmus.com/fonts/Emails/adelle_reg-webfont.ttf') format('truetype'),
+    url('https://litmus.com/fonts/Emails/adelle_reg-webfont.svg#adelle_rgregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    font-family: "proxima_nova_rgregular",  sans-serif;
+    color: #061020;
+}
+.container {
+    margin: auto;
+    padding-top: 130px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 100px;
+    color: var(--color-secondary-dark);
+}
+
+.btn {
+    padding: 16px 32px;
+    background: var(--color-secondary);
+    border-radius: 4px;
+    border: 2px solid transparent;
+    font-family: 'proxima_nova_rgregular';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: var(--color-secondary-dark);
+    font-weight: 500;
+    &:focus {
+        border-color: var(--color-primary-light);
+        outline: 0;
+        box-shadow: 0 0 0 0.25rem rgba(13, 253, 85, 0.25);
+    
+    }
+}
+.btn-primary {
+    &:hover {
+        border-color: var(--color-primary);    
+    }
+}
