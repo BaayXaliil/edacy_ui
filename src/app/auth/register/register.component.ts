@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterComponent implements OnInit {
 
+  showPassword: boolean = false;
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onShowPassword() {
+    this.showPassword = !this.showPassword;
   }
 
 }
