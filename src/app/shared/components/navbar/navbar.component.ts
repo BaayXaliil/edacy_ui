@@ -14,7 +14,6 @@ export class NavbarComponent implements OnInit {
   constructor(private route: Router) { }
 
   ngOnInit(): void {
-    console.log(this.route.url);
     if (this.route.url == "/company") {
       this.platform = this.alert = true;
     }
