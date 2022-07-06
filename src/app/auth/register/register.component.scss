@@ -1,8 +1,6 @@
 .signup {
     box-sizing: border-box;
     padding: 40px;
-    width: 488px;
-    height: 584px;
     background: #FFFFFF;
     border: 1px solid #E8EAED;
     box-shadow: 0px 8px 24px rgb(1 12 21 / 4%);
@@ -97,13 +95,14 @@
             }
         }
 
-        p {
+        .question {
             height: 24px;
             font-weight: 400;
             font-size: 16px;
             line-height: 24px;
             text-align: center;
             letter-spacing: 0.002em;
+            margin: 0;
 
             a {
                 color: var(--color-primary);

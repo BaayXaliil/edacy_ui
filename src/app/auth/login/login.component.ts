@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
+  showPassword: boolean = false;
+  err_pwd: boolean = false;
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onShowPassword() {
+    this.showPassword = !this.showPassword;
+  }
+
+  onSubmit() {
+    this.err_pwd = !this.err_pwd;
   }
 
 }
