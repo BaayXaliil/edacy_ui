@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 /* You can add global styles to this file, and also import other style files */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;500;700&display=swap');
+@import url('http://fonts.cdnfonts.com/css/proxima-nova-2');
 
 :root {
     --color-primary: #63BFAD;
@@ -10,38 +10,21 @@
     --color-primary-light: #F2F2F2;
     --border-button-secondary: 2px solid gainsboro;
     --box-shadow: 0px 8px 24px rgba(1, 12, 21, 0.04);
-    --card-box-shadow:  0px 2px 12px rgba(20, 20, 43, 0.08);
-}
-
-
-@font-face {
-    font-family: 'proxima_nova_rgregular';
-    src: url('https://litmus.com/fonts/Emails/proximanova-regular-webfont.eot');
-    src: url('https://litmus.com/fonts/Emails/proximanova-regular-webfont.eot?#iefix') format('embedded-opentype'),
-        url('https://litmus.com/fonts/Emails/proximanova-regular-webfont.woff') format('woff'),
-        url('https://litmus.com/fonts/Emails/proximanova-regular-webfont.ttf') format('truetype'),
-        url('https://litmus.com/fonts/Emails/proximanova-regular-webfont.svg#proxima_nova_rgregular') format('svg');
-    font-weight: 500;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'proxima_nova_rgbold';
-    src: url('https://litmus.com/fonts/Emails/proximanova-bold-webfont.eot');
-    src: url('https://litmus.com/fonts/Emails/proximanova-bold-webfont.eot?#iefix') format('embedded-opentype'),
-    url('https://litmus.com/fonts/Emails/proximanova-bold-webfont.woff') format('woff'),
-    url('https://litmus.com/fonts/Emails/proximanova-bold-webfont.ttf') format('truetype'),
-    url('https://litmus.com/fonts/Emails/proximanova-bold-webfont.svg#proxima_nova_rgbold') format('svg');
-    font-weight: 700;
-    font-style: normal;
+    --card-box-shadow: 0px 2px 12px rgba(20, 20, 43, 0.08);
 }
 
 body {
     margin: 0;
-    font-family: "proxima_nova_rgregular",  sans-serif;
+    font-family: 'Proxima Nova', sans-serif;
     color: #061020;
     background: #F2F2F2;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
 }
+
 .container {
     margin: auto;
     padding-top: 136px;
@@ -51,13 +34,15 @@ body {
     padding-bottom: 100px;
     color: var(--color-secondary-dark);
 }
-
+.container.private {
+    padding-top: 178px;
+}
 .btn {
     padding: 16px 32px;
     background: var(--color-secondary);
     border-radius: 4px;
     border: 2px solid transparent;
-    font-family: 'proxima_nova_rgregular';
+    font-family: 'Proxima Nova';
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
@@ -66,16 +51,32 @@ body {
     letter-spacing: 1.2px;
     text-transform: uppercase;
     color: var(--color-secondary-dark);
-    font-weight: 500;
+
     &:focus {
         border-color: var(--color-primary-light);
         outline: 0;
         box-shadow: 0 0 0 0.25rem rgba(13, 253, 85, 0.25);
-    
+
     }
 }
+
 .btn-primary {
     &:hover {
-        border-color: var(--color-primary);    
+        border-color: var(--color-primary);
     }
+}
+
+
+//    POUR LE COLOR PICKER 
+
+.chrome-controls {
+    display: none !important;
+}
+
+.chrome-wrap {
+    padding-top: 0 !important;
+}
+
+.chrome-picker {
+    width: 100% !important;
 }

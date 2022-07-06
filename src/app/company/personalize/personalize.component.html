@@ -1,0 +1,66 @@
+<app-navbar></app-navbar>
+<div class="container" [ngClass]="{'private': alert}">
+    <div class="customize">
+        <div class="environnement_title">Customize your environment</div>
+        <div class="environnement_form">
+            <div class="form-group">
+                <label for="domain">Domain</label>
+                <input type="text" name="domain" id="domain" class="form-control">
+                <span> .edacy.com</span>
+            </div>
+            <div class="form-group">
+                <div class="form_group_label">Logo</div>
+                <div class="form_group_inline">
+                    <div class="content_left">
+                        <div class="title">Upload your favicon</div>
+                        <div class="upload">
+                            <input type="file" name="file" id="upload-favicon" accept="image/*" ref="file"
+                                (change)="onFileChangeFav($event)">
+                            <label for="upload-favicon" class="upload-favicon">
+                                <i class="fas fa-cloud-upload-alt" *ngIf="!favicon"></i>
+                                <div class="upload-info" *ngIf="!favicon">
+                                    <p>Format: jpg, png, ico</p>
+                                    <p>Max size: 100 KB</p>
+                                </div>
+                                <img [src]="favicon" alt="" *ngIf="favicon">
+                            </label>
+                        </div>
+                    </div>
+                    <div class="content_right">
+                        <div class="title">Upload logo</div>
+                        <div class="upload">
+                            <input type="file" name="file" id="upload" ref="file" (change)="onFileChangeLogo($event)">
+                            <label for="upload" class="upload-logo">
+                                <i class="fas fa-cloud-upload-alt" *ngIf="!logo"></i>
+                                <div class="upload-info" *ngIf="!logo">
+                                    <p>Format: jpg, png</p>
+                                    <p>Max size: 10 MB</p>
+                                </div>
+                                <img [src]="logo" alt="" *ngIf="logo">
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form_group_label">Theme</div>
+                <div class="theme_content">
+                    <div class="content_left">
+                        <div class="title">Primary Theme Color</div>
+                        <div class="color-picker">
+                            <color-chrome color="#4F46E5" (onChange)="handleChangeColorPrimary($event)"></color-chrome>
+                        </div>
+                    </div>
+                    <div class="content_right">
+                        <div class="title">Secondary Theme Color</div>
+                        <div class="color-picker">
+                            <color-chrome color="#4F46E5" (onChange)="handleChangeColorSecondary($event)">
+                            </color-chrome>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="btn btn-primary">Save</button>
+        </div>
+    </div>
+</div>

@@ -1,23 +1,42 @@
-<header>
-    <div class="header_left" routerLink="/">EDACY</div>
-    <div class="header_right">
-        <div class="dropdown">
-            <div class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                <i class="fas fa-globe"></i>
-                <span *ngIf="true">EN</span>
-                <span *ngIf="false">FR</span>
-                <i class="fas fa-chevron-down"></i>
+<header [ngClass]="{'private': alert}">
+    <div class="alert" *ngIf="alert">
+        <div class="alert_text">⏰ 14 days trial remaining. <a href="#">Upgrade now</a></div>
+        <img src="../../../../assets/img/close.svg" alt="">
+    </div>
+    <div class="header">
+        <div class="header_left" routerLink="/"><img src="../../../../assets/img/logo.svg" alt="logo"></div>
+        <div class="header_right">
+            <div class="dropdown">
+                <div class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <i class="fas fa-globe"></i>
+                    <span *ngIf="true">EN</span>
+                    <span *ngIf="false">FR</span>
+                    <i class="fas fa-chevron-down lang"></i>
+                </div>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" routerLink="#">Arabic</a></li>
+                    <li><a class="dropdown-item" routerLink="#">English</a></li>
+                    <li><a class="dropdown-item" routerLink="#">French</a></li>
+                </ul>
             </div>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                <li><a class="dropdown-item" routerLink="#">Arabic</a></li>
-                <li><a class="dropdown-item" routerLink="#">English</a></li>
-                <li><a class="dropdown-item" routerLink="#">French</a></li>
-            </ul>
-        </div>
-        <div class="buttons">
-            <button class="btn white" routerLink="/login">log in</button>
-            <button class="btn" routerLink="/register">Get Started</button>
+            <div class="buttons" *ngIf="!platform">
+                <button class="btn white" routerLink="/login">log in</button>
+                <button class="btn" routerLink="/register">Get Started</button>
+            </div>
+            <div class="profile" [ngClass]="{'hidden': !platform}">
+                <div class="profile_avatar">A</div>
+                <div 
+                    class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2" *ngIf="platform">
+                    <li><a class="dropdown-item" routerLink="/home">Profile Setting</a></li>
+                    <li><a class="dropdown-item" routerLink="/home">Customize</a></li>
+                    <li><a class="dropdown-item" routerLink="/home">Logout</a></li>
+                </ul>
+            </div>
         </div>
     </div>
 </header>

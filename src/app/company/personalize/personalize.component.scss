@@ -1,0 +1,194 @@
+.customize {
+    box-sizing: border-box;
+    padding: 40px;
+    width: 488px;
+    font-family: 'Proxima Nova';
+    background: #FFFFFF;
+    border: 1px solid #E8EAED;
+    box-shadow: 0px 8px 24px rgb(1 12 21 / 4%);
+    border-radius: 4px;
+
+    .environnement_title {
+        font-family: 'Proxima Nova';
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 44px;
+        margin-bottom: 20px;
+    }
+
+    .environnement_form {
+        .form-group {
+            margin-bottom: 16px;
+            position: relative;
+
+            label {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 20px;
+                letter-spacing: 0.2px;
+                margin-bottom: 8px;
+            }
+
+            .form-control {
+                background: #E8EAED;
+                border-radius: 4px;
+                padding: 16px;
+                letter-spacing: 0.2px;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 20px;
+                color: #061020;
+                padding-right: 118px;
+                border: none;
+
+                &:focus {
+                    border: 1px solid #E8EAED;
+                    outline: 0;
+                    box-shadow: none;
+                }
+            }
+
+            span {
+                position: absolute;
+                right: 20px;
+                top: 32px;
+                letter-spacing: 0.2px;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 20px;
+                border-left: 1px solid;
+                height: 46px;
+                padding-top: 14px;
+                padding-left: 6px;
+            }
+
+            .form_group_label {
+                margin-bottom: 8px;
+            }
+
+            .form_group_inline {
+                display: flex;
+                justify-content: space-between;
+                gap: 16px;
+
+                .content_left,
+                .content_right {
+                    width: 100%;
+
+                    .title {
+                        font-weight: 400;
+                        font-size: 12px;
+                        line-height: 16px;
+                        margin-bottom: 8px;
+                    }
+
+                    .upload {
+                        input {
+                            display: none;
+                        }
+
+                        label {
+                            width: 100%;
+                            background: white;
+                            height: 120px;
+                            border: 2px dashed gainsboro;
+                            cursor: pointer;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            font-size: 30px;
+                            color: var(--color-secondary);
+
+                            .upload-info {
+                                font-weight: 400;
+                                font-size: 12px;
+                                line-height: 16px;
+                                text-align: center;
+                                letter-spacing: 0.002em;
+                                color: #061020;
+
+                                p {
+                                    margin: 0;
+                                }
+                            }
+
+                            .fas {
+                                color: var(--color-primary);
+                                font-size: 24px;
+                            }
+                        }
+
+                        .upload-favicon {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 12px;
+
+                            img {
+                                width: 50px;
+                                height: 50px;
+                                border-radius: 50%;
+                            }
+
+                        }
+
+                        .upload-logo {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 12px;
+
+                            img {
+                                width: 100%;
+                                height: auto;
+                            }
+
+                        }
+                    }
+                }
+
+            }
+
+            .theme_content {
+                display: flex;
+                gap: 16px;
+                margin-bottom: 25px;
+
+                .content_left {
+                    width: 100%;
+
+                    .title {
+                        font-weight: 400;
+                        font-size: 12px;
+                        line-height: 16px;
+                        margin-bottom: 8px;
+                    }
+                }
+
+                .content_right {
+                    width: 100%;
+                    .title {
+                        font-weight: 400;
+                        font-size: 12px;
+                        line-height: 16px;
+                        margin-bottom: 8px;
+                    }
+                }
+            }
+        }
+
+        .btn-primary {
+            background: #63BFAD;
+            border-radius: 4px;
+            width: 100%;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 16px;
+            text-align: center;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+
+            &:hover {
+                color: #061020;
+            }
+        }
+    }
+}

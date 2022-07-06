@@ -7,6 +7,8 @@ import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './shared/components/navbar/navbar.component';
+import { PersonalizeComponent } from './company/personalize/personalize.component';
+import { ColorChromeModule } from 'ngx-color/chrome';
 
 @NgModule({
   declarations: [
@@ -14,11 +16,13 @@ import { NavbarComponent } from './shared/components/navbar/navbar.component';
     LoginComponent,
     RegisterComponent,
     HomeComponent,
-    NavbarComponent
+    NavbarComponent,
+    PersonalizeComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ColorChromeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
