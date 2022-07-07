@@ -2,7 +2,7 @@
     margin-top: 30px;
     margin-bottom: 20px;
     font-family: 'Proxima Nova';
-    font-weight: 700;
+    font-weight: 800;
     font-size: 36px;
     line-height: 44px;
     text-align: center;
@@ -19,6 +19,7 @@
     label {
         margin: 0 10px;
         color: #717171;
+        text-transform: capitalize;
     }
 
     label.checked {

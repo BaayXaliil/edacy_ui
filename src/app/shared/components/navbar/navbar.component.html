@@ -1,7 +1,7 @@
-<header [ngClass]="{'private': alert}">
-    <div class="alert" *ngIf="alert">
+<header [ngClass]="{'private': platform}">
+    <div class="alert" *ngIf="alert && platform">
         <div class="alert_text">⏰ 14 days trial remaining. <a href="#">Upgrade now</a></div>
-        <img src="../../../../assets/img/close.svg" alt="">
+        <img src="../../../../assets/img/close.svg" alt="" (click)="toggleAlert()">
     </div>
     <div class="header">
         <div class="header_left" routerLink="/"><img src="../../../../assets/img/logo.svg" alt="logo"></div>

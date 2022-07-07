@@ -17,7 +17,10 @@ export class NavbarComponent implements OnInit {
     if (this.route.url == "/company") {
       this.platform = this.alert = true;
     }
-    
+  }
+
+  toggleAlert() {
+    this.alert = !this.alert;
   }
 
 }
