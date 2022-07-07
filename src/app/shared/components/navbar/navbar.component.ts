@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
@@ -8,6 +8,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class NavbarComponent implements OnInit {
 
+  @Output() 
+  togglePadding: EventEmitter<boolean> = new EventEmitter<boolean>()
   platform = false;
   alert = false;
 
@@ -21,6 +23,8 @@ export class NavbarComponent implements OnInit {
 
   toggleAlert() {
     this.alert = !this.alert;
+    // On émit l'évenement pour changer le padding du ".container" parent
+    this.togglePadding.emit(this.alert)
   }
 
 }

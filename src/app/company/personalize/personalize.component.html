@@ -1,4 +1,4 @@
-<app-navbar></app-navbar>
+<app-navbar (togglePadding)="alert = $event"></app-navbar>
 <div class="container" [ngClass]="{'private': alert}">
     <div class="customize">
         <div class="environnement_title">Customize your environment</div>
