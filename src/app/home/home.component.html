@@ -4,9 +4,12 @@
         Try EDACY for free, then use a plan that meets your needs
     </div>
     <div class="form-switch">
-        <label class="form-check-label" for="flexSwitchCheckChecked">monthly</label>
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
-        <label class="form-check-label" for="flexSwitchCheckChecked">yearly</label>
+        <label for="flexSwitchCheckChecked" [ngClass]="{'checked': !monthly}">monthly</label>
+        <div class="switch">
+            <input type="checkbox" id="flexSwitchCheckChecked" (change)="onChange($event)">
+            <span class="slider round"></span>
+        </div>
+        <label for="flexSwitchCheckChecked" [ngClass]="{'checked': monthly}">yearly</label>
     </div>
     <div class="plans">
         <div class="plan">
@@ -30,37 +33,37 @@
                 </div> -->
                 <div class="tick">
                     <div class="tick_text">
-                        Checked checkbox
+                        Up to 50 learners
                     </div>
                     <div class="checkmark"></div>
                 </div>
                 <div class="tick">
                     <div class="tick_text">
-                        Checked checkbox
+                        Unlimited courses
                     </div>
                     <div class="checkmark"></div>
                 </div>
                 <div class="tick">
                     <div class="tick_text">
-                        Checked checkbox
+                        2GB storage
                     </div>
                     <div class="checkmark"></div>
                 </div>
                 <div class="tick">
                     <div class="tick_text">
-                        Checked checkbox
+                        Access to groups & tutors
                     </div>
                     <div class="checkmark"></div>
                 </div>
                 <div class="tick">
                     <div class="tick_text">
-                        Checked checkbox
+                        Custom domain
                     </div>
                     <div class="checkmark"></div>
                 </div>
                 <div class="tick">
                     <div class="tick_text">
-                        Checked checkbox
+                        Zoom integration
                     </div>
                     <div class="checkmark"></div>
                 </div>
@@ -83,37 +86,37 @@
             <div class="ticks">
                 <div class="tick">
                     <div class="tick_text">
-                        Checked checkbox
+                        Up to 250 learners
                     </div>
                     <div class="checkmark"></div>
                 </div>
                 <div class="tick">
                     <div class="tick_text">
-                        Checked checkbox
+                        Up to 250 courses
                     </div>
                     <div class="checkmark"></div>
                 </div>
                 <div class="tick">
                     <div class="tick_text">
-                        Checked checkbox
+                        10GB storage
                     </div>
                     <div class="checkmark"></div>
                 </div>
                 <div class="tick">
                     <div class="tick_text">
-                        Checked checkbox
+                        Access to groups & tutors
                     </div>
                     <div class="checkmark"></div>
                 </div>
                 <div class="tick">
                     <div class="tick_text">
-                        Checked checkbox
+                        Custom domain
                     </div>
                     <div class="checkmark"></div>
                 </div>
                 <div class="tick">
                     <div class="tick_text">
-                        Checked checkbox
+                        Zoom integration
                     </div>
                     <div class="checkmark"></div>
                 </div>
@@ -132,37 +135,37 @@
             <div class="ticks">
                 <div class="tick">
                     <div class="tick_text">
-                        Checked checkbox
+                        Up to 250 learners
                     </div>
                     <div class="checkmark"></div>
                 </div>
                 <div class="tick">
                     <div class="tick_text">
-                        Checked checkbox
+                        Up to 250 courses
                     </div>
                     <div class="checkmark"></div>
                 </div>
                 <div class="tick">
                     <div class="tick_text">
-                        Checked checkbox
+                        10GB storage
                     </div>
                     <div class="checkmark"></div>
                 </div>
                 <div class="tick">
                     <div class="tick_text">
-                        Checked checkbox
+                        Access to groups & tutors
                     </div>
                     <div class="checkmark"></div>
                 </div>
                 <div class="tick">
                     <div class="tick_text">
-                        Checked checkbox
+                        Custom domain
                     </div>
                     <div class="checkmark"></div>
                 </div>
                 <div class="tick">
                     <div class="tick_text">
-                        Checked checkbox
+                        Zoom integration
                     </div>
                     <div class="checkmark"></div>
                 </div>

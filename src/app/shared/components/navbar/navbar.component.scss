@@ -37,7 +37,7 @@ header {
                 border: 2px solid transparent;
                 font-family: 'Proxima Nova';
                 font-style: normal;
-                font-weight: 500;
+                font-weight: 600;
                 font-size: 16px;
                 line-height: 20px;
                 text-align: center;
@@ -45,7 +45,6 @@ header {
                 text-transform: uppercase;
                 color: var(--color-secondary-dark);
                 height: 52px;
-                font-weight: 500;
             }
 
             .white {
@@ -163,7 +162,7 @@ header {
             border-radius: 20px;
             color: green;
             text-transform: uppercase;
-            font-weight: 500;
+            font-weight: 600;
             background-color: inherit;
         }
 
@@ -198,7 +197,7 @@ header.private {
                 text-decoration: none;
                 font-family: 'Proxima Nova';
                 font-style: normal;
-                font-weight: 500;
+                font-weight: 400;
                 font-size: 16px;
                 line-height: 20px;
                 letter-spacing: 1.2px;

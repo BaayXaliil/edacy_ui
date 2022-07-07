@@ -1,7 +1,8 @@
 .title {
     margin-top: 30px;
     margin-bottom: 20px;
-    font-family: 'proxima_nova_rgbold';
+    font-family: 'Proxima Nova';
+    font-weight: 700;
     font-size: 36px;
     line-height: 44px;
     text-align: center;
@@ -17,25 +18,73 @@
 
     label {
         margin: 0 10px;
+        color: #717171;
     }
-}
 
-.form-check-input {
-    width: 64px;
-    height: 32px;
-    margin-left: 0;
-}
+    label.checked {
+        color: var(--color-secondary-dark);
+    }
 
-.form-check-input:checked {
-    background-color: var(--color-primary);
-    border-color: var(--color-primary);
-}
+    /* Checkbox Customized */
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+    }
 
-.form-check-input:focus {
-    border-color: var(--color-primary-light);
-    outline: 0;
-    box-shadow: 0 0 0 0.25rem rgba(13, 253, 85, 0.25);
+    .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
 
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: var(--color-primary);
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+
+    input:checked+.slider {
+        background-color: var(--color-primary);
+    }
+
+    input:focus+.slider {
+        box-shadow: 0 0 1px var(--color-primary);
+    }
+
+    input:checked+.slider:before {
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+    }
+
+    /* Rounded sliders */
+    .slider.round {
+        border-radius: 34px;
+    }
+
+    .slider.round:before {
+        border-radius: 50%;
+    }
 }
 
 .plans {
@@ -57,7 +106,8 @@
         margin-bottom: 80px;
 
         .plan_title {
-            font-family: 'proxima_nova_rgbold';
+            font-family: 'Proxima Nova';
+            font-weight: 700;
             font-size: 24px;
             line-height: 28px;
             letter-spacing: 0.2px;
@@ -75,7 +125,7 @@
             justify-content: center;
             font-style: normal;
             font-weight: 400;
-            font-size: 10px;
+            font-size: 14px;
             line-height: 16px;
             color: #FFFFFF;
             padding: 4px 8px;
@@ -228,6 +278,7 @@
     .table_light {
         border-bottom: 2px solid transparent;
         background-color: #E8EAED;
+
         tr {
             td {
                 padding: 24px;
@@ -241,15 +292,17 @@
 
     tbody {
         background-color: #FFFFFF;
+
         td {
-            font-weight: 400;
+            font-weight: 500;
             font-size: 14px;
             line-height: 16px;
             padding: 24px;
             color: var(--color-secondary-dark);
-            
+
             &:first-child {
                 color: #717171;
+                font-weight: 400;
                 text-align: left;
             }
         }
