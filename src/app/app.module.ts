@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './shared/components/navbar/navbar.component';
 import { PersonalizeComponent } from './company/personalize/personalize.component';
 import { ColorChromeModule } from 'ngx-color/chrome';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ColorChromeModule } from 'ngx-color/chrome';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ColorChromeModule
+    ColorChromeModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

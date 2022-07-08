@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 /* You can add global styles to this file, and also import other style files */
 @import url('http://fonts.cdnfonts.com/css/proxima-nova-2');
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
 :root {
     --color-primary: #63BFAD;
@@ -78,9 +78,18 @@ body {
 }
 
 .chrome-wrap {
-    padding-top: 0 !important;
+    display: none !important;
 }
 
 .chrome-picker {
     width: 100% !important;
+    box-shadow: none !important;
+
+    .saturation {
+        border-radius: 4px !important;
+        height: 128px !important;
+        .saturation-pointer {
+            display: none !important;
+        }
+    }
 }
