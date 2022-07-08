@@ -197,6 +197,10 @@
             padding-left: 0;
             margin-bottom: 16px;
             position: relative;
+            display: flex;
+            align-items: center;
+            height: 24px;
+
 
             .tick_text {
                 padding-left: 34px;
@@ -246,7 +250,7 @@
     .button {
         width: 100%;
         height: 52px;
-        font-weight: 700;
+        font-weight: 500;
         margin-bottom: 14px;
     }
 
@@ -300,6 +304,8 @@
             line-height: 16px;
             padding: 24px;
             color: var(--color-secondary-dark);
+            width: 304px;
+            height: 64px;
 
             &:first-child {
                 color: #717171;
@@ -329,7 +335,7 @@
 
         .checkmark {
             position: absolute;
-            top: 0;
+            top: -4px;
             left: 0;
             height: 24px;
             width: 24px;
