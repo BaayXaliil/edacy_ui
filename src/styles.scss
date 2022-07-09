@@ -28,13 +28,13 @@ body {
 
 .container {
     font-family: 'Proxima Nova', sans-serif;
-    margin: auto;
-    padding-top: 136px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 100px;
-    font-weight: 500;
+    margin: auto !important;
+    padding-top: 136px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    padding-bottom: 100px !important;
+    font-weight: 500 !important;
 
     color: var(--color-secondary-dark);
 }
