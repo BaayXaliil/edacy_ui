@@ -31,7 +31,11 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              {
+                "input": "src/external-module/styles.scss",
+                "inject": false,
+                "bundleName": "external-module"
+              }
             ],
             "scripts": []
           },
@@ -55,10 +59,7 @@
                   "with": "src/environments/environment.prod.ts"
                 }
               ],
-              "outputHashing": "all",
-              "optimization": {
-                "fonts": false
-              }
+              "outputHashing": "all"
             },
             "development": {
               "buildOptimizer": false,
