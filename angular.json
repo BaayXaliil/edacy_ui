@@ -32,9 +32,8 @@
             ],
             "styles": [
               {
-                "input": "src/external-module/styles.scss",
-                "inject": false,
-                "bundleName": "external-module"
+                "input": "src/styles.scss",
+                "inject": false
               }
             ],
             "scripts": []
