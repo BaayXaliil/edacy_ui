@@ -56,10 +56,7 @@
                 }
               ],
               "outputHashing": "all",
-              "optimization": {
-                "fonts": false,
-                "styles": false
-              }
+              "optimization": false
             },
             "development": {
               "buildOptimizer": false,
