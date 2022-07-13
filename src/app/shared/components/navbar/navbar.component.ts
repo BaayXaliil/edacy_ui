@@ -12,12 +12,20 @@ export class NavbarComponent implements OnInit {
   togglePadding: EventEmitter<boolean> = new EventEmitter<boolean>()
   platform = false;
   alert = false;
+  sidebar: boolean = false;
+  overview = false;
 
-  constructor(private route: Router) { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
-    if (this.route.url == "/company") {
+    if (this.router.url == "/company") {
       this.platform = this.alert = true;
+    }
+    if (this.router.url == "/overview") {
+      this.platform = this.alert = this.sidebar = this.overview = true;
+    }
+    if (this.router.url == "/billing") {
+      this.platform = this.sidebar = true;
     }
   }
 

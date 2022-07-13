@@ -1,0 +1,13 @@
+<div id="body-pd" class="body-pd">
+    <app-navbar (togglePadding)="alert = $event"></app-navbar>
+    <div class="container" [ngClass]="{'private': alert}">
+        <div class="content">
+            <div class="content_body">
+                <div class="content_icon">
+                    <img src="../../../assets/img/prrogam.svg" alt="">
+                </div>
+                <div class="content_text">Create your first program</div>
+            </div>
+        </div>
+    </div>
+</div>

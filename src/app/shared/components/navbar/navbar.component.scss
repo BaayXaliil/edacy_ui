@@ -174,6 +174,7 @@ header {
 
 header.private {
     margin-top: -1;
+
     .alert {
         position: relative;
         margin: 0;
@@ -246,4 +247,91 @@ header.private {
 
 .dropdown-toggle::after {
     visibility: hidden;
+}
+
+.l-navbar {
+    position: fixed;
+    top: 128px;
+    left: 0;
+    bottom: 0;
+    width: 80px;
+    background: #FFFFFF;
+    padding: 40px 16px;
+    transition: .3s;
+    filter: drop-shadow(0px 8px 24px rgba(1, 12, 21, 0.04));
+    &.is_alert {
+        top: 88px;
+    }
+    .nav {
+        overflow: hidden;
+
+        .header_toggle {
+            width: 24px;
+            height: 24px;
+            position: absolute;
+            background: var(--color-primary);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            padding: 8px;
+            top: 8px;
+            right: -12px;
+            cursor: pointer;
+        }
+
+        .nav_list {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+
+            .nav_link {
+                height: 48px;
+                padding: 18px 17px;
+                font-size: 14px;
+                line-height: 16px;
+                color: #717171;
+                width: 100%;
+                text-decoration: none;
+                display: grid;
+                grid-template-columns: max-content max-content;
+                align-items: center;
+                column-gap: 10px;
+                margin-bottom: 8px;
+
+                &.active {
+                    background: #fff7d9;
+                    color: var(--color-secondary-dark);
+                    border-radius: 4px;
+                    i {
+                        color: var(--color-secondary);
+                    }
+                }
+
+                i {
+                    margin: 0;
+                    color: #717171;
+                }
+                img {
+                    height: 12px;
+                }
+                .nav_name {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+// .l-navbar.show {
+//     .nav_link {
+//         column-gap: 10px !important;
+//     }
+// }
+
+@media screen and (min-width: 768px) {
+    .l-navbar.show {
+        width: 236px;
+        .nav_link .nav_name {
+            display: inline !important;
+        }
+    }
 }

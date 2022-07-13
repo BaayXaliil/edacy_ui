@@ -1,0 +1,6 @@
+<div id="body-pd" class="body-pd">
+    <app-navbar (togglePadding)="alert = $event"></app-navbar>
+    <div class="container" [ngClass]="{'private': alert}">
+        <h1>Billing works !</h1>
+    </div>
+</div>

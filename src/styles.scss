@@ -26,6 +26,14 @@ body {
     letter-spacing: 0.2px;
 }
 
+.body-pd {
+    padding-left: 236px !important;
+}
+
+#body-pd {
+    padding-left: 80px;
+}
+
 .container {
     font-family: 'Proxima Nova', sans-serif;
     margin: auto;
@@ -38,9 +46,20 @@ body {
 
     color: var(--color-secondary-dark);
 }
+
 .container.private {
     padding-top: 178px;
+    max-width: 100%;
+    margin: 0;
+    padding-left: 40px;
+    padding-right: 40px;
+
+    &.sidebar_show {
+        padding-left: 72px;
+        padding-right: 72px;
+    }
 }
+
 .btn {
     padding: 16px 32px;
     background: var(--color-secondary);
@@ -88,6 +107,7 @@ body {
     .saturation {
         border-radius: 4px !important;
         height: 128px !important;
+
         .saturation-pointer {
             display: none !important;
         }

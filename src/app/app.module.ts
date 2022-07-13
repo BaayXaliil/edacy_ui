@@ -10,6 +10,8 @@ import { NavbarComponent } from './shared/components/navbar/navbar.component';
 import { PersonalizeComponent } from './company/personalize/personalize.component';
 import { ColorChromeModule } from 'ngx-color/chrome';
 import { FormsModule } from '@angular/forms';
+import { OverviewComponent } from './company/overview/overview.component';
+import { BillingComponent } from './company/billing/billing.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { FormsModule } from '@angular/forms';
     RegisterComponent,
     HomeComponent,
     NavbarComponent,
-    PersonalizeComponent
+    PersonalizeComponent,
+    OverviewComponent,
+    BillingComponent
   ],
   imports: [
     BrowserModule,
