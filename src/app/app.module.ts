@@ -12,6 +12,7 @@ import { ColorChromeModule } from 'ngx-color/chrome';
 import { FormsModule } from '@angular/forms';
 import { OverviewComponent } from './company/overview/overview.component';
 import { BillingComponent } from './company/billing/billing.component';
+import { SelectDomainComponent } from './company/select-domain/select-domain.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { BillingComponent } from './company/billing/billing.component';
     NavbarComponent,
     PersonalizeComponent,
     OverviewComponent,
-    BillingComponent
+    BillingComponent,
+    SelectDomainComponent
   ],
   imports: [
     BrowserModule,

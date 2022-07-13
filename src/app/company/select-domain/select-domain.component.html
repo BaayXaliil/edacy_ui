@@ -1,0 +1,27 @@
+<app-navbar (togglePadding)="alert = $event"></app-navbar>
+<div class="container" [ngClass]="{'private': alert}">
+    <div class="content">
+        <div class="content_title">Select your domain</div>
+        <div class="content_item">
+            <div>
+                <div class="item_image"><img src="../../../assets/img/Logoneatdesign.svg" alt="" class="logo"></div>
+                <div class="item_text">neatdesign.edacy.com</div>
+            </div>
+            <img src="../../../assets/img/angle_right.svg" alt="" class="item_icon">
+        </div>
+        <div class="content_item">
+            <div>
+                <div class="item_image"><img src="../../../assets/img/Logoneatdesign.svg" alt="" class="logo"></div>
+                <div class="item_text">starkindustries.edacy.com</div>
+            </div>
+            <img src="../../../assets/img/angle_right.svg" alt="" class="item_icon">
+        </div>
+        <div class="content_item">
+            <div>
+                <div class="item_image"><img src="../../../assets/img/add.svg" alt=""></div>
+                <div class="item_text">New domain</div>
+            </div>
+            <img src="../../../assets/img/angle_right.svg" alt="" class="item_icon">
+        </div>
+    </div>
+</div>

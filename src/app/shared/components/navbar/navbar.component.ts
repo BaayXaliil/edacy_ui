@@ -27,6 +27,9 @@ export class NavbarComponent implements OnInit {
     if (this.router.url == "/billing") {
       this.platform = this.sidebar = true;
     }
+    if (this.router.url == "/select-domain") {
+      this.platform = true;
+    }
   }
 
   toggleAlert() {
