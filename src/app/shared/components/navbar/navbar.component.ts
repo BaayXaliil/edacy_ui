@@ -8,16 +8,41 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class NavbarComponent implements OnInit {
 
-  @Output() 
+  @Output()
   togglePadding: EventEmitter<boolean> = new EventEmitter<boolean>()
   platform = false;
   alert = false;
   sidebar: boolean = false;
   overview = false;
+  overviewActive = false;
+  settingActive = false;
+  customizeActive = false;
+  integrationActive = false;
+  helpActive = false;
+  div: HTMLElement | null = null;
 
   constructor(private router: Router) { }
 
   ngOnInit(): void {
+    console.log(this.router.url);
+    switch (this.router.url) {
+      case "/overview":
+        this.overviewActive = true;        
+        break;
+      case "/customize":
+        this.customizeActive = true
+        break;
+      case "/billing":
+        this.settingActive = true
+        break;
+      case "/integration":
+        this.integrationActive = true
+        break;
+      default:
+        this.overviewActive = true
+        break;
+    }
+
     if (this.router.url == "/company") {
       this.platform = this.alert = true;
     }
@@ -38,4 +63,10 @@ export class NavbarComponent implements OnInit {
     this.togglePadding.emit(this.alert)
   }
 
+  onSidebarChange(event: any) {
+    event.target.parentNode.parentNode.classList.toggle("show")
+    event.target.parentNode.parentNode.parentNode.parentNode?.classList.toggle("body-pd")
+    event.target.parentNode.parentNode.parentNode.parentNode?.lastElementChild?.classList.toggle('sidebar_show')
+    //     $("#header").toggleClass('body-pd');
+  }
 }

@@ -43,24 +43,34 @@
 
 <div id="nav-bar" class="l-navbar show" *ngIf="sidebar" [ngClass]="{'is_alert': alert == false }">
     <nav class="nav">
-        <div class="header_toggle" id="header-toggle">
+        <div class="header_toggle" id="header-toggle" (click)="onSidebarChange($event)">
             <img src="../../../../assets/img/angle_left.svg" alt="">
         </div>
         <div class="nav_list">
-            <a routerLink="/overview" class="nav_link active">
-                <img src="../../../../assets/img/home.svg" alt="" class="nav_icon"> <span class="nav_name">Overview</span>
+            <a routerLink="/overview" class="nav_link" routerLinkActive="active">
+                <img src="../../../../assets/img/home.svg" alt="" class="nav_icon" *ngIf="!overviewActive"> 
+                <img src="../../../../assets/img/home_active.svg" alt="" class="nav_icon" *ngIf="overviewActive">
+                <span class="nav_name">Overview</span>
             </a>
-            <a routerLink="#" class="nav_link">
-                <img src="../../../../assets/img/custome.svg" alt="" class="nav_icon"> <span class="nav_name">Customize</span>
+            <a routerLink="#" class="nav_link" routerLinkActive="active">
+                <img src="../../../../assets/img/custome.svg" alt="" class="nav_icon" *ngIf="!customizeActive"> 
+                <img src="../../../../assets/img/custome_active.svg" alt="" class="nav_icon" *ngIf="customizeActive"> 
+                <span class="nav_name">Customize</span>
             </a>
-            <a routerLink="#" class="nav_link"> 
-                <img src="../../../../assets/img/integration.svg" alt="" class="nav_icon"> <span class="nav_name">Integrations</span>
+            <a routerLink="#" class="nav_link" routerLinkActive="active"> 
+                <img src="../../../../assets/img/integration.svg" alt="" class="nav_icon" *ngIf="!integrationActive"> 
+                <img src="../../../../assets/img/integration_active.svg" alt="" class="nav_icon" *ngIf="integrationActive"> 
+                <span class="nav_name">Integrations</span>
             </a>
-            <a routerLink="/billing" class="nav_link">
-                <img src="../../../../assets/img/settings.svg" alt="" class="nav_icon"><span class="nav_name">Settings</span>
+            <a routerLink="/billing" class="nav_link" routerLinkActive="active">
+                <img src="../../../../assets/img/settings.svg" alt="" class="nav_icon"*ngIf="!settingActive">
+                <img src="../../../../assets/img/settings_active.svg" alt="" class="nav_icon"*ngIf="settingActive">
+                <span class="nav_name">Settings</span>
             </a>
-            <a routerLink="#" class="nav_link"> 
-                <img src="../../../../assets/img/help.svg" alt="" class="nav_icon"> <span class="nav_name">Help</span>
+            <a routerLink="#" class="nav_link" routerLinkActive="active"> 
+                <img src="../../../../assets/img/help.svg" alt="" class="nav_icon" *ngIf="!helpActive"> 
+                <img src="../../../../assets/img/help_active.svg" alt="" class="nav_icon" *ngIf="helpActive"> 
+                <span class="nav_name">Help</span>
             </a>
         </div>
     </nav>
