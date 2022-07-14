@@ -1,6 +1,120 @@
 <div id="body-pd" class="body-pd">
     <app-navbar (togglePadding)="alert = $event"></app-navbar>
-    <div class="container" [ngClass]="{'private': alert}">
-        <h1>Billing works !</h1>
+    <div class="container">
+        <div class="content">
+            <div class="content_header">
+                <div class="content_title">
+                    <div class="title">Subscription</div>
+                    <div class="subtitle">Trainer: €99/month</div>
+                </div>
+                <button class="btn btn-secondary" routerLink="/company">Upgrade</button>
+            </div>
+            <div class="content_details">
+                <div class="detail_title">Billing Details</div>
+                <div class="detail_subtitle">Manage your subscription, billing details and payment method</div>
+                <div class="detail_form">
+                    <div class="form-group-inline">
+                        <div class="form-group">
+                            <label for="lastName">First Name</label>
+                            <input type="text" name="firstName" id="firstName" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" name="lastName" id="lastName" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group-inline">
+                        <div class="form-group">
+                            <label for="address">Address</label>
+                            <input type="text" name="address" id="address" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="city">City</label>
+                            <input type="text" name="city" id="city" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group-inline">
+                        <div class="form-group">
+                            <label for="country">Country</label>
+                            <input type="text" name="country" id="country" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="code">ZIP code</label>
+                            <input type="number" name="code" id="code" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group-inline">
+                        <div class="form-group">
+                            <label for="vatNumber">VAT number</label>
+                            <input type="text" name="vatNumber" id="vatNumber" class="form-control">
+                        </div>
+                    </div>
+                    <button class="btn btn-primary" routerLink="/company">Save changes</button>
+                </div>
+            </div>
+            <div class="content_payment">
+                <div class="payment_title">Payment Method</div>
+                <div class="payment_method">
+                    <!-- <div class="payment_card active">
+                        <div class="img">
+                            <img src="./../../../assets/img/payment.svg" alt="">
+                        </div>
+                    </div> -->
+                    <div class="payment_card active">
+                        <label class="img" for="card">
+                            <input class="form-check-input" type="radio" (change)="onCheckPayment($event)" name="payment" id="card" checked>
+                            <img src="./../../../assets/img/payment.svg" alt="">
+                        </label>
+                    </div>
+    
+                    <div class="payment_card">
+                        <label class="img" for="paypal">
+                            <input class="form-check-input" type="radio" (change)="onCheckPayment($event)" name="payment" id="paypal">
+                            <img src="./../../../assets/img/paypal.svg" alt="">
+                        </label>
+                    </div>
+                    <div class="payment_card">
+                        <label class="img" for="flutterWave">
+                            <input class="form-check-input" type="radio" (change)="onCheckPayment($event)" name="payment" id="flutterWave">
+                            <img src="./../../../assets/img/flutter.svg" alt="">
+                        </label>
+                    </div>
+                </div>
+                <div class="payment_form">
+                    <div class="form-group">
+                        <label for="cardNumber">Card number</label>
+                        <input type="number" name="cardNumber" id="cardNumber" class="form-control">
+                    </div>
+                    <div class="form-group-inline">
+                        <div class="form-group">
+                            <label for="date">Expiry date</label>
+                            <input type="date" name="date" id="date" class="form-control" (change)="onChangeDate($event)">
+                        </div>
+                        <div class="form-group">
+                            <label for="cvv">CVV</label>
+                            <input type="number" name="cvv" id="cvv" class="form-control">
+                        </div>
+                    </div>
+                    <button class="btn btn-primary" routerLink="/company">Save changes</button>
+                </div>
+            </div>
+            <div class="content_invoices">
+                <div class="invoice_title">Invoices</div>
+                <div class="invoice_table">
+                    <div class="header">
+                        <div class="column">Date</div>
+                        <div class="column">Amount</div>
+                        <div class="column">Status</div>
+                        <div class="column">Action</div>
+                    </div>
+                    <div class="body">
+                        <div class="column">June 4, 2022</div>
+                        <div class="column">€99</div>
+                        <div class="column"><span></span> Completed</div>
+                        <div class="column"><img src="./../../../assets/img/download.svg" alt=""> Download</div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

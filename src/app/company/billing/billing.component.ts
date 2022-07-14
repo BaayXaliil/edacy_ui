@@ -13,4 +13,13 @@ export class BillingComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onCheckPayment(event: any) {
+    event.target.parentNode.parentNode.parentNode.querySelector('.active')?.classList.remove('active')
+    event.target.parentNode.parentNode.classList.add('active')
+  }
+
+  onChangeDate(event: any) {
+    console.log(event.target.value);
+  }
+
 }
