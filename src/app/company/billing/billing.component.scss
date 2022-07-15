@@ -141,6 +141,15 @@
     .content_payment {
         margin-bottom: 16px;
 
+        .form-group-inline {
+            width: 100%;
+            .form-group {
+                width: 100%;
+            }
+        }
+        .form-control {
+            width: 100%;
+        }
         .payment_title {
             font-weight: 700;
             font-size: 24px;

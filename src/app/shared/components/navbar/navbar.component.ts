@@ -24,7 +24,6 @@ export class NavbarComponent implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit(): void {
-    console.log(this.router.url);
     switch (this.router.url) {
       case "/overview":
         this.overviewActive = true;        
@@ -67,6 +66,5 @@ export class NavbarComponent implements OnInit {
     event.target.parentNode.parentNode.classList.toggle("show")
     event.target.parentNode.parentNode.parentNode.parentNode?.classList.toggle("body-pd")
     event.target.parentNode.parentNode.parentNode.parentNode?.lastElementChild?.classList.toggle('sidebar_show')
-    //     $("#header").toggleClass('body-pd');
   }
 }

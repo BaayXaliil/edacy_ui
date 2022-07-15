@@ -7,7 +7,7 @@
                     <div class="title">Subscription</div>
                     <div class="subtitle">Trainer: €99/month</div>
                 </div>
-                <button class="btn btn-secondary" routerLink="/company">Upgrade</button>
+                <button class="btn btn-secondary" routerLink="/company" routerLink="/overview">Upgrade</button>
             </div>
             <div class="content_details">
                 <div class="detail_title">Billing Details</div>
@@ -16,37 +16,37 @@
                     <div class="form-group-inline">
                         <div class="form-group">
                             <label for="lastName">First Name</label>
-                            <input type="text" name="firstName" id="firstName" class="form-control">
+                            <input type="text" name="firstName" id="firstName" class="form-control" placeholder="John">
                         </div>
                         <div class="form-group">
                             <label for="lastName">Last Name</label>
-                            <input type="text" name="lastName" id="lastName" class="form-control">
+                            <input type="text" name="lastName" id="lastName" class="form-control" placeholder="Appleseed">
                         </div>
                     </div>
                     <div class="form-group-inline">
                         <div class="form-group">
                             <label for="address">Address</label>
-                            <input type="text" name="address" id="address" class="form-control">
+                            <input type="text" name="address" id="address" class="form-control" placeholder="Ruelle du Midi 7">
                         </div>
                         <div class="form-group">
                             <label for="city">City</label>
-                            <input type="text" name="city" id="city" class="form-control">
+                            <input type="text" name="city" id="city" class="form-control" placeholder="Sion">
                         </div>
                     </div>
                     <div class="form-group-inline">
                         <div class="form-group">
                             <label for="country">Country</label>
-                            <input type="text" name="country" id="country" class="form-control">
+                            <input type="text" name="country" id="country" class="form-control" placeholder="Switzerland">
                         </div>
                         <div class="form-group">
                             <label for="code">ZIP code</label>
-                            <input type="number" name="code" id="code" class="form-control">
+                            <input type="number" name="code" id="code" class="form-control" placeholder="1950">
                         </div>
                     </div>
                     <div class="form-group-inline">
                         <div class="form-group">
                             <label for="vatNumber">VAT number</label>
-                            <input type="text" name="vatNumber" id="vatNumber" class="form-control">
+                            <input type="text" name="vatNumber" id="vatNumber" class="form-control" #vatnumber (ngModelChange)="onChangeVatNumber(vatnumber)" placeholder="945 222 3217" ngModel>
                         </div>
                     </div>
                     <button class="btn btn-primary" routerLink="/company">Save changes</button>
@@ -55,11 +55,6 @@
             <div class="content_payment">
                 <div class="payment_title">Payment Method</div>
                 <div class="payment_method">
-                    <!-- <div class="payment_card active">
-                        <div class="img">
-                            <img src="./../../../assets/img/payment.svg" alt="">
-                        </div>
-                    </div> -->
                     <div class="payment_card active">
                         <label class="img" for="card">
                             <input class="form-check-input" type="radio" (change)="onCheckPayment($event)" name="payment" id="card" checked>
@@ -83,16 +78,16 @@
                 <div class="payment_form">
                     <div class="form-group">
                         <label for="cardNumber">Card number</label>
-                        <input type="number" name="cardNumber" id="cardNumber" class="form-control">
+                        <input type="tel" name="cardNumber" id="cardNumber" #cardnumber class="form-control" placeholder="1234 1410 2022 1992" (ngModelChange)="onChangeNumber(cardnumber)" ngModel>
                     </div>
                     <div class="form-group-inline">
                         <div class="form-group">
                             <label for="date">Expiry date</label>
-                            <input type="date" name="date" id="date" class="form-control" (change)="onChangeDate($event)">
+                            <input type="text" name="date" id="date" class="form-control" (change)="onChangeDate($event)" placeholder="12/25" ngModel>
                         </div>
                         <div class="form-group">
                             <label for="cvv">CVV</label>
-                            <input type="number" name="cvv" id="cvv" class="form-control">
+                            <input type="number" name="cvv" id="cvv" class="form-control" placeholder="238">
                         </div>
                     </div>
                     <button class="btn btn-primary" routerLink="/company">Save changes</button>
